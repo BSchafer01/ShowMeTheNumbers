@@ -185,6 +185,11 @@ input{
     font-weight: 900;
 }
 
+strong{
+    color: var(--clr-primary);
+    font-size: 900;
+}
+
 
 /* Tooltip text */
 .results-grid-item .tooltiptext {

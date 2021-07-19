@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Site Template</title>
+    <title>Show Me The Numbers: Coding Challenge by Brandon Schafer</title>
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="../css/code.css">
     <link rel="stylesheet" href="../css/prism.css">
@@ -24,7 +24,7 @@
                 </g>
             </svg>
 
-            <p>Sample Name</p>
+            <p>Show Me The Numbers</p>
         </div>
         <div class="links">
             <ul class="nav-list">
@@ -36,7 +36,7 @@
     </nav>
     <main>
         <div class="title">
-            <h1>The code for APP NAME</h1>
+            <h1>The code for Show Me The Numbers</h1>
             <hr class="custom-hr">
         </div>
         <div class="content">
@@ -142,14 +142,25 @@
             </div>
             
             <div class="explanation">
-                <h3>Function 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, possimus? Laboriosam vero neque cupiditate in eum quaerat nulla, quibusdam earum, numquam molestiae ipsa impedit,  fugit?</p>
+                <p>The code is structured into four functions.</p>
+                <h3>btnClick</h3>
+                <p>btnClick is called when the user clicks the button. This function gets the user input from the page.</p>
+                <p>It utilizes <strong>getElementById</strong> to pull the values from the page. It parses those values to ensure an integer was submitted and then passes those values into the <strong>generateNumbers</strong> function.</p>
+                <p>The result of <strong>generateNumbers</strong> is then passed into <strong>displayNumbers</strong> to create the grid on the screen.</p>
                 <hr class="custom-sub-hr">
-                <h3>Function 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus maxime fuga quas velit quibusdam voluptatibus nostrum maiores, distinctio debitis sed pariatur modi necessitatibus, dolores accusantium quam qui libero blanditiis aperiam perspiciatis.</p>
+                <h3>generateNumbers</h3>
+                <p>generateNumbers <strong>loops</strong> through the list of integers between the start value and the end values and returns the array of numbers.</p>
                 <hr class="custom-sub-hr">
-                <h3>Function 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quaerat itaque fugit? Totam, neque aliquam! Laborum temporibus molestiae reiciendis doloremque!</p>
+                <h3>displayNumbers</h3>
+                <p>displayNumbers loops through each number of the list created by <strong>generateNumbers</strong> and calls <strong>checkNumber</strong>. It adds the result of <strong>checkNumber</strong> to the variable <strong>templateCells</strong>.</p>
+                <p>It then finds the DOM element with an Id of "results" and adds the final version of <strong>templateCells</strong> as a child.</p>
+                <hr class="custom-sub-hr">
+                <h3>checkNumber</h3>
+                <p>checkNumber first checks to see if the number is 0, 1, or 2. If none of those are true it checks to see if the square root of the number is a whole number.</p>
+                <p>It then checks to see if the number has a remainder when divided by 2 (using the modulo feature <strong>%</strong>).</p>
+                <p>Finally, if none of these result in <strong>true</strong> it will loop through every number from 3 through the square root of the number to see if any modulo equals 0.</p>
+                <p>If this results in <strong>false</strong> we can conclude the number is a prime number. Otherwise, it is divisible by some number, and the program will add that divisor to the tooltip so the user will be able to know the first divisor of the particular number.</p>
+                
             </div>
         </div>
 
