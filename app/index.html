@@ -44,9 +44,12 @@
             </div>
             <div class="app">
                 <h3>Enter Values</h3>
-                <input type="number" id="startValue" title="Start Value" min="0" value=1>
-                <input type="number" id="endValue" title="End Value" min="0" value=100>
-                <button class="btn" id="getValues" onclick="btnClick()">Show the Grid</button>
+                <div class="user-input">
+                    <input type="number" id="startValue" title="Start Value" min="0" value=1>
+                    <input type="number" id="endValue" title="End Value" min="0" value=100>
+                    <button class="btn" id="getValues" onclick="btnClick()">Show the Grid</button>  
+                </div>
+                <span class="error none" id="error"></span>
                 <h2  class="results">Results</h2>
                 <div class="results-grid disabled" id="results">
                     

@@ -1,22 +1,29 @@
 function btnClick(){
     const start = parseInt(document.getElementById("startValue").value);
     const end = parseInt(document.getElementById("endValue").value);
+    const error = document.getElementById("error");
 
     if (Number.isInteger(start) && Number.isInteger(end)) {
 
-        if (start < end) {
+        if (start < 0 || end < 0 || start > 9999 || end > 9999 ) {
+            error.innerHTML = "The start and end values must be between 0 and 9999";
+            error.classList.remove("none");
+        }
+        else if (start < end) {
             let numbers = [];
-
+            error.classList.add("none");
             numbers = generateNumbers(start, end);
     
             displayNumbers(numbers);
         } else {
-            alert("The end value must be larger than the start value");
+            error.innerHTML = "The end value must be larger than the start value";
+            error.classList.remove("none");
         }
 
         
     } else {
-        alert("You must define integer values");
+        error.innerHTML = "You must define positive integer values";
+        error.classList.remove("none");
     }
 
 }
@@ -48,6 +55,7 @@ function displayNumbers(numbers){
 
 function checkNumber(number){
 
+    
     if (number == 0 || number == 1) {
         return  `<div class="results-grid-item">
                     <span class="tooltiptext">${number} is not divisible</span>
