@@ -76,6 +76,8 @@ input{
     }
 }
 
+
+
 .results{
     margin-top: 5rem;
 }
@@ -238,3 +240,7 @@ strong{
     visibility: visible;
     opacity: 1;
   }
+
+  .disabled{
+    visibility: hidden;
+}

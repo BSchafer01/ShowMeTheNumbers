@@ -57,6 +57,9 @@
 *::after{
     box-sizing: border-box;
 }
+.fa-rotate-90{
+    filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+}
 
 html, body{
     height: 100%;

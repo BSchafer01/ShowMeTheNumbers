@@ -39,8 +39,9 @@ function displayNumbers(numbers){
     numbers.forEach(number => {
         templateCells += checkNumber(number);
     });
-
-    document.getElementById("results").innerHTML = templateCells;
+    let results = document.getElementById("results");
+    results.classList.remove("disabled");
+    results.innerHTML = templateCells;
 
 }
 
